@@ -426,3 +426,7 @@ video:hover {
 }
 
 /*---end video styling----*/
+.footer {
+background: linear-gradient(to right, #b2f7c7, #d5f9e3);
+text-align: center;
+}
