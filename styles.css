@@ -1,0 +1,428 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Navbar Styling */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #b2f7c7, #d5f9e3);
+    padding: 0 !important;
+}
+
+.donhodzo-logo {
+    width: 150px;
+    height: 100px;
+    padding-left: 20px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: darkgreen !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars {
+    color: darkgreen;
+    font-size: 30px !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/* Banner Section */
+.banner {
+    background-image: linear-gradient(to right, #b2f7c7, #d5f9e3);
+    color: darkgreen;
+    padding-top: 5%;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+    transition: padding-bottom 0.5s ease-in-out;
+
+}
+
+.promo-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.play-button {
+    width: 45px;
+    margin: 20px;
+}
+
+.banner a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    z-index: -1;
+}
+
+#services {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    transition: padding-top 0.5s ease-in-out;
+}
+
+
+.service-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.service-img:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+
+
+/*---adding custom media queries*/
+@media (max-width: 768px) {
+    .service-img {
+        height: 200px;
+
+    }
+
+    .promo-title {
+        font-size: 30px;
+
+    }
+
+    .navbar-nav li {
+        text-align: center;
+
+    }
+}
+
+/* Services Section */
+#services {
+    background-color: #f2f8f0;
+    padding: 50px 0;
+}
+
+#services h2 {
+    color: darkgreen;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+}
+
+/* Slide-up Divider */
+.slide-up-divider {
+    width: 100%;
+    height: 10px;
+    background-color: #d5f9e3;
+    position: relative;
+    transform: translateY(5px);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* On Hover/When Scrolled */
+#services:hover+.slide-up-divider {
+    transform: translateY(0);
+}
+
+/* About Us Section */
+#about-us {
+    background-image: linear-gradient(to right, #b2f7c7, #d5f9e3);
+    padding: 50px 0;
+}
+
+#about-us h2 {
+    font-size: 32px;
+    color: darkgreen;
+    text-align: center;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* About Us Section */
+#about-us {
+    background-color: #f9faf7;
+
+    padding: 50px 0;
+    color: darkgreen;
+    overflow: hidden;
+}
+
+#about-us h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: darkgreen;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+#about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+#about-us h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: darkgreen;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+#about-us .col-md-6 {
+    margin-bottom: 30px;
+}
+
+/* Image Motion */
+.about-us-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 1s ease-in-out forwards;
+}
+
+/* Hover Effects */
+.about-us-img:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+#about-us h2:hover {
+    letter-spacing: 2px;
+    transition: 0.5s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contact Us Section */
+#contact {
+    padding: 60px 0;
+    background: linear-gradient(to right, #b2f7c7, #d5f9e3);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+
+
+}
+
+
+#contact::before {
+    content: "";
+    background: url("images/Donhodzo Logo.png") no-repeat center center;
+    background-size: 600px;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* Section Title */
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: darkgreen;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Subtitle */
+.section-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+#contact-form {
+    background: beige;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Form Fields */
+.form-control {
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.btn-contact {
+    background: darkgreen !important;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-contact:hover {
+    cursor: pointer;
+}
+
+/* Contact Details */
+.contact-info {
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    padding-top: 20px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    font-size: 22px;
+    color: darkgreen;
+}
+
+/* Hover Animation */
+#contact-form:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+/*------styling the video------*/
+video {
+    width: 100%;
+    transition: filter 1s ease;
+    filter: grayscale(100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+video:hover {
+    filter: grayscale(0%);
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*---end video styling----*/
